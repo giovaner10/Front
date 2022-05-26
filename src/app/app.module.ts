@@ -35,8 +35,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { ConfirmExitDialogComponent } from './shared/confirm-exit-dialog/confirm-exit-dialog.component';
 import { ConfirmExitGuard } from './guards/confirm-exit.guard';
 import { DelUsuarioComponent } from './components/usuario/del-usuario/del-usuario.component';
-import { AuthInterceptorPorvider } from './interceptors/auth.interceptor';
-import { AuthGuard } from './guards/auth.guard';
+import {  AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NovaQuestaoComponent } from './components/questoes/nova-questao/nova-questao.component';
 import { EditQuestaoComponent } from './components/questoes/edit-questao/edit-questao.component';
 import { InfoUsuarioComponent } from './components/usuario/info-usuario/info-usuario.component';
@@ -123,7 +122,7 @@ const maskConfig: Partial<IConfig> = {
     HttpClientModule,
     NgxMaskModule.forRoot(maskConfig),
     MatSidenavModule,
-    
+
 
 
 
@@ -133,8 +132,7 @@ const maskConfig: Partial<IConfig> = {
     MatDatepickerModule,
     MatNativeDateModule,
     ConfirmExitGuard,
-    AuthInterceptorPorvider,
-    AuthGuard,
+    AuthInterceptorProvider,
     [{ provide: MAT_DATE_LOCALE, useValue: 'pt-BR' }]
   ],
 

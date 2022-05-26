@@ -47,7 +47,7 @@
 
         <span *ngFor="let alternativa of novaQuestao.alternativas; let i = index">
           {{alternativa}}
-          <button #botao mat-raised-button color="warn" type="button" (keyup.enter)="prevent($event)" (click)="deletarAtividade(i,1)">
+          <button class="trash" mat-mini-fab color="warn" type="button" (keyup.enter)="prevent($event)" (click)="deletarAtividade(i,1)">
             <mat-icon>delete</mat-icon>
           </button>
         </span>

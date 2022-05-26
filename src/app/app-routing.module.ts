@@ -21,7 +21,6 @@ import { EditUsuarioComponent } from './components/usuario/edit-usuario/edit-usu
 import { NavComponent } from './components/nav/nav.component';
 import { ConfirmExitGuard } from './guards/confirm-exit.guard';
 import { DelUsuarioComponent } from './components/usuario/del-usuario/del-usuario.component';
-import { AuthGuard } from './guards/auth.guard';
 import { InfoUsuarioComponent } from './components/usuario/info-usuario/info-usuario.component';
 import { ListFormularioComponent } from './components/formulario/list-formulario/list-formulario.component';
 import { NovaQuestaoComponent } from './components/questoes/nova-questao/nova-questao.component';
@@ -34,6 +33,7 @@ import { EditQuestaoComponent } from './components/questoes/edit-questao/edit-qu
 import { DelQuestaoComponent } from './components/questoes/del-questao/del-questao.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 import { AgradecimentoFormComponent } from './components/agradecimento-form/agradecimento-form.component';
+import { AutenticacaoGuard } from './guards/autenticacao.guard';
 
 
 const routes: Routes = [
@@ -51,9 +51,8 @@ const routes: Routes = [
   {
     path:'',
     component: NavComponent,
-    // canActivate: [
-    //   AuthGuard
-    // ],
+     canActivate: [
+      AutenticacaoGuard],
     children: [
 
       {

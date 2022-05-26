@@ -43,7 +43,7 @@
 
       <span *ngFor="let item of listadeQuestoesForm; let i = index" >
         {{item.enunciado}}
-        <button mat-mini-fab color="accent" type="button" (click)="deletarQuestao(i,1)">
+        <button class="trash" mat-mini-fab color="warn" type="button" (click)="deletarQuestao(i,1)">
           <mat-icon>delete</mat-icon>
         </button>
       </span>
@@ -79,13 +79,11 @@
         </mat-select>
       </mat-form-field>
 
-      <button mat-raised-button color="primary" type="submit" style="margin-top: 10px;"
+      <button class="btn" mat-raised-button color="warn" type="submit" style="margin-top: 10px;"
         [disabled]="!validarCampos()">Atualizar</button>
 
-        <button mat-raised-button color="primary" type="submit" style="margin-top: 10px; "routerLink="/formulario/lista-formulario"
+        <button class="btn" mat-raised-button color="primary" type="submit" style="margin-top: 10px; "routerLink="/formulario/lista-formulario"
         >Cancelar</button>
-
-
 
       </form>
   </mat-card>

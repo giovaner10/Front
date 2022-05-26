@@ -45,7 +45,7 @@
   
   button {
     margin-top: .5rem;
-    margin-right: 20px
+    margin-right: 20px;
   }
   
   mat-icon {
@@ -63,4 +63,8 @@
 
   .botao {
       width: 10px;
+  }
+
+  .trash {
+    margin: 4px;
   }

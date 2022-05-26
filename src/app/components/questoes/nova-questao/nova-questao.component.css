@@ -69,3 +69,7 @@ mat-icon {
   border-radius: 60px;
   min-height: auto;
 }
+
+.trash {
+  margin: 4px;
+}

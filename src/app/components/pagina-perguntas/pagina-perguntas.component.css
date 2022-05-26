@@ -11,31 +11,34 @@
   height: 60px;
   display: flex;
   justify-content: center;
-  background: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%);
-  overflow: auto;
+  
+  
 }
 
 #logo {
   margin: 0;
 }
 
-.container {
-  width: 90%;
-  margin: auto;
-  
+.btn {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
 }
 
 mat-form-field {
   width: 100%;
 }
+
 .form {
   display: flex;
   justify-content: center;
   width: 500px;
   border-radius: 60px;
-  text-align: center;
-  border: 1px solid black;
-  
+  text-align: left;
+  margin-right: 50px;
+  margin-bottom: 20px;
 }
 
 .flex-container {
@@ -43,7 +46,8 @@ mat-form-field {
   align-items: center;
   justify-content: center;
   margin-top: 30px;
-  margin-right: 45px;
+  background-repeat: repeat;
+  width: 100%;
 }
 
 button {
@@ -57,7 +61,6 @@ mat-icon {
   align-items: center;
 }
 
-
 mat-radio-group {
   display: flex;
   flex-direction: column;
@@ -67,4 +70,8 @@ mat-radio-group {
 
 mat-radio-button {
   margin-bottom: 15px;
+}
+
+.body {
+  background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(37,97,207,1) 0%, rgba(0,212,255,1) 100%);
 }

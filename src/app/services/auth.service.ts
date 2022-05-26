@@ -17,7 +17,7 @@ export class AuthService {
   /**
    * Autenticando
    * @param creds Precisa fazer um login para acessar o site
-   * @returns 
+   * @returns o usuario que foi logado
    */
   authenticate(creds: Credenciais) {
     return this.http.post(`${this.baseUrl}`, creds, {

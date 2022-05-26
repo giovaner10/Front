@@ -43,7 +43,7 @@ export class NovaQuestaoComponent implements OnInit, CanDeactivate {
     ) { }
 
   canDeactivate(): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> {
-    
+
     if (this.formulario.dirty) {
       const ref = this.dialog.open(ConfirmExitDialogComponent)
 
@@ -109,7 +109,7 @@ export class NovaQuestaoComponent implements OnInit, CanDeactivate {
 
   }
    /**
-   * 
+   *
    * @returns Verifica se os campos do Formulário estão preenchidos para cadastrar
    */
   validarCampos(): boolean {
@@ -124,7 +124,7 @@ export class NovaQuestaoComponent implements OnInit, CanDeactivate {
     }
   }
    /**
-   * 
+   *
    * @param index Busca a atividade pelo seu index
    * @param remove Remove a atividade de acordo com o index
    */
@@ -133,7 +133,7 @@ export class NovaQuestaoComponent implements OnInit, CanDeactivate {
 
   }
   /**
-   * 
+   *
    * @param event Impede que o deletar seja feito pelo Keyup enter
    */
   prevent(event: any){

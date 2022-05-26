@@ -38,6 +38,5 @@
    margin: 41px;
    border-radius: 60px;
    padding: 30px;
-   width: 499px;
-   height: 424px;
+   min-height: auto;
 }
