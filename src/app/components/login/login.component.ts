@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   creds: Credenciais = {
     matricula: '123456',
-    senha: '123456'
+    senha: ''
   }
 
   matricula = new FormControl("123456", Validators.required);
