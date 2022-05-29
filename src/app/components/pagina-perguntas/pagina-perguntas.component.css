@@ -36,7 +36,6 @@ mat-form-field {
   width: 500px;
   border-radius: 50px;
   text-align: left;
-  margin-right: 50px;
   margin-bottom: 20px;
 }
 
@@ -76,7 +75,7 @@ mat-radio-button {
   height: 150vh;
 }
 
-@media (max-width: 400px)
+@media (max-width: 600px)
 {
   .responsive
    {
