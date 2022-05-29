@@ -64,7 +64,6 @@ export class NovaQuestaoComponent implements OnInit, CanDeactivate {
 
     this.formulario = this.formBuilder.group({
       enunciado: ['', [Validators.required,Validators.minLength(6)]],
-      tipoDePergunta: ['', [Validators.required]],
     })
   }
 

@@ -21,7 +21,7 @@ export class ListQuestaoComponent implements OnInit {
   }
   ELEMENT_DATA: Questoes[] = []
 
-  displayedColumns: string[] = ['id','enunciado', 'tipoDePergunta','acoes'];
+  displayedColumns: string[] = ['id','enunciado','acoes'];
   dataSource = new MatTableDataSource<Questoes>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: any;
@@ -44,8 +44,8 @@ export class ListQuestaoComponent implements OnInit {
     })
   }
   /**
-   * 
-   * @param event Filtra a pesquisa retornando informações do formulário 
+   *
+   * @param event Filtra a pesquisa retornando informações do formulário
    */
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

@@ -124,6 +124,10 @@ export class NovoFormularioComponent implements OnInit, CanDeactivate {
     this.formularios.questoes.push(this.questao)
     this.selecionarQuestoes.reset()
   }
+
+  deletarQuestao(index: number, remove: number) {
+    this.formularios.questoes.splice(index, remove)
+  }
  
   /**
    * 

@@ -15,7 +15,7 @@
     </button>
 
     <mat-card class="form">
-      <form action="" id="main-form" [formGroup]="formulario" 
+      <form action="" id="main-form" [formGroup]="formulario"
       (ngSubmit)="editarQuestao(questao.id||0)">
 
       <h1>Editar questão</h1>
@@ -28,12 +28,7 @@
         </mat-error>
     </mat-form-field>
 
-    <h3>Tipo de pergunta:</h3>
-
-      <span>
-          {{questao.tipoDePergunta}}
-      </span>     
-
+   
     <h3>Alternativas:</h3>
 
     <span *ngFor="let alternativa of questao.alternativas; let i = index">

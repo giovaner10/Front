@@ -41,14 +41,12 @@
           (click)="cadastrarQuestao()">Adicionar questão</button>
       </form>
 
-
-      <!-- <mat-form-field appearance="outline">
-              <mat-label>Questões </mat-label>
-              <input type="text" matInput formControlName="questoes" name="questoes" [(ngModel)]="formularios.questoes" >
-              <mat-error>
-                Este campo é obrigatório
-              </mat-error>
-            </mat-form-field> -->
+      <span *ngFor="let item of formularios.questoes; let i = index" >
+        {{item.enunciado}}
+        <button class="trash" mat-mini-fab color="warn" type="button" (click)="deletarQuestao(i,1)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </span>
 
       <mat-form-field appearance="fill">
         <mat-label> Destinatário do Formulario</mat-label>

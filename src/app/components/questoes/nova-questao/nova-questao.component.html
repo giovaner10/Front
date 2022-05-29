@@ -26,17 +26,7 @@
         </mat-error>
       </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Tipo da pergunta</mat-label>
-        <mat-select [(ngModel)]="novaQuestao.tipoDePergunta" name="tipoDePergunta" formControlName="tipoDePergunta"
-          required>
-          <mat-option *ngFor="let item of tipoDaPergunta" [value]="item">{{item}}</mat-option>
-        </mat-select>
-
-        <mat-error>
-          Este campo é obrigatório
-        </mat-error>
-      </mat-form-field>
+   
 
       <form action="" id="main-form1" [formGroup]="formularioAlternativas">
 

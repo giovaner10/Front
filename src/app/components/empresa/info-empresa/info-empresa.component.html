@@ -35,6 +35,16 @@
         {{ empresa.nomeRepresentante }}
       </mat-card-content>
 
+      <mat-card-content>
+        <mat-card-subtitle>email_30_DiasEnviado</mat-card-subtitle>
+        {{ empresa.email_30_DiasEnviadoParceiro == true ? "Enviado" : "Nao Enviado"}}
+      </mat-card-content>
+  
+      <mat-card-content>
+        <mat-card-subtitle>email_30_DiasRespondido</mat-card-subtitle>
+        {{ empresa.email_30_FormularioRespondidoParceiro == true ? "Respondido" : "Nao Respondido"}}
+      </mat-card-content>
+
       <button routerLink="/empresa/editar-empresa/{{ empresa.cnpj }}" mat-raised-button color="primary" type="button"
         style="margin-top: 10px" class="btn">Editar</button>
     </mat-card>

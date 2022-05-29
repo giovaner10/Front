@@ -27,12 +27,6 @@
         </mat-error>
       </mat-form-field>
 
-      <h3>Tipo de pergunta:</h3>
-
-      <span>
-        {{questao.tipoDePergunta}}
-      </span>
-
       <h3>Alternativas:</h3>
 
       <span *ngFor="let alternativa of questao.alternativas; let i = index">

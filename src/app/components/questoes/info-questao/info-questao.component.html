@@ -29,11 +29,7 @@
       {{questao.enunciado}}
     </mat-card-content>
 
-    <mat-card-content>
-      <mat-card-subtitle>Tipo da questão:</mat-card-subtitle>
-      {{questao.tipoDePergunta}}
-    </mat-card-content>
-
+   
     <mat-card-content>
       <mat-card-subtitle>Aternativas da questão:</mat-card-subtitle>
       <p *ngFor="let alternativa of questao.alternativas; let i = index">

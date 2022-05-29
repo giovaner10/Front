@@ -53,11 +53,11 @@
 
     <mat-card-content>
       <mat-card-subtitle>Atual status do aluno:</mat-card-subtitle>
-      {{ aluno.dataDesligamento == null ? "Empregado" : "Demitido" }}
+      {{ aluno.dataDesligamento == null ? "Empregado" : "Desligado" }}
     </mat-card-content>
 
     <mat-card-content>
-      <mat-card-subtitle>Data da demissão:</mat-card-subtitle>
+      <mat-card-subtitle>Data de desligamento:</mat-card-subtitle>
       {{ aluno.dataDesligamento | date: 'dd/MM/yyyy' }}
     </mat-card-content>
 
@@ -73,9 +73,40 @@
     </mat-card-content>
 
     <mat-card-content>
-      <mat-card-subtitle>email_30_DiasEnviado</mat-card-subtitle>
+      <mat-card-subtitle>email_30_DiasRespondido</mat-card-subtitle>
       {{ aluno.email_30_FormularioRespondido == true ? "Respondido" : "Nao Respondido"}}
     </mat-card-content>
+
+    <mat-card-content>
+      <mat-card-subtitle>email_30_DiasEnviado</mat-card-subtitle>
+      {{ aluno.email_30_DiasEnviado == true ? "Enviado" : "Nao Enviado"}}
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-card-subtitle>email_90_DiasEnviado</mat-card-subtitle>
+      {{ aluno.email_90_DiasEnviado == true ? "Respondido" : "Nao Respondido"}}
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-card-subtitle>email_90_FormularioRespondido</mat-card-subtitle>
+      {{ aluno.email_90_FormularioRespondido == true ? "Enviado" : "Nao Enviado"}}
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-card-subtitle>email_180_DiasEnviado</mat-card-subtitle>
+      {{ aluno.email_180_DiasEnviado == true ? "Respondido" : "Nao Respondido"}}
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-card-subtitle>email_365_DiasEnviado</mat-card-subtitle>
+      {{ aluno.email_365_DiasEnviado == true ? "Enviado" : "Nao Enviado"}}
+    </mat-card-content>
+
+    <mat-card-content>
+      <mat-card-subtitle>email_365_FormularioRespondido</mat-card-subtitle>
+      {{ aluno.email_365_FormularioRespondido == true ? "Respondido" : "Nao Respondido"}}
+    </mat-card-content>
+
 
 
 

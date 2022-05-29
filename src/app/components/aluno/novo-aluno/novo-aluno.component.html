@@ -87,22 +87,12 @@
             </mat-error>
       </mat-form-field>
 
-      <mat-form-field appearance="outline">
-        <mat-label>Data de desligamento da empresa</mat-label>
-        <input matInput [matDatepicker]="picker2" formControlName="dataDesligamento" name="dataDesligamento" [(ngModel)]="aluno.dataDesligamento">
-        <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2></mat-datepicker>
-           <mat-error>
-             Este campo é obrigatório
-            </mat-error>
-      </mat-form-field>
-
+    
       <mat-form-field appearance="outline">
         <mat-label>Observações</mat-label>
         <textarea matInput formControlName="motivoDesligamento" name="motivoDesligamento" [(ngModel)]="aluno.motivoDesligamento"></textarea>
-        
-       
+
+
            <mat-error>
              Este campo é obrigatório
             </mat-error>

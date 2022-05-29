@@ -73,7 +73,7 @@ export class NovoAlunoComponent implements OnInit, CanDeactivate {
       cel: ['', [Validators.required, Validators.minLength(3)]],
       turma:['', [Validators.required, Validators.minLength(3)]],
       dataContratacao: ['', [Validators.required]],
-      dataDesligamento: [''],
+     // dataDesligamento: [''],
       parceiroCnpj: ['', [Validators.required]],
       motivoDesligamento: ['']
     })

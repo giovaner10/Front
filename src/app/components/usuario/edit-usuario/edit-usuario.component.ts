@@ -37,7 +37,7 @@ export class EditUsuarioComponent implements OnInit, CanDeactivate {
   ){}
 
   /**
-   * Metodo do guard para evitar que o usuario perca os dados que digitou no 
+   * Metodo do guard para evitar que o usuario perca os dados que digitou no
    * input saindo da pagina sem antes ter enviado o formulario
    * @return boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree
    */
@@ -74,11 +74,11 @@ export class EditUsuarioComponent implements OnInit, CanDeactivate {
   /**
    * Função para salvar os dados editados do usuario, chamando o metodo do servico de editar, e ainda, se tudo der certo:
    * .Mostra uma snackBar ao usuario informando uma mensagem de sucesso
-   * .Reseta os campos de input 
+   * .Reseta os campos de input
    *. Nevega o usuario até a página de listagem dos usuarios
    * Se der errado:
    * .Mostra mensagens de erro através do snackBar que variam de acordo com o tipo do erro
-   * @param matricula 
+   * @param matricula
    */
   editarUsuario(matricula:string){
     this.usuarioService.atualizarUsuario(this.usuario).subscribe(()=>{
@@ -86,25 +86,24 @@ export class EditUsuarioComponent implements OnInit, CanDeactivate {
       this.formulario.reset()
       this.matricula = undefined
       this.router.navigate([`usuario/info-usuario/${matricula}`])
-    }, ex => {
-    if(ex.error.errors) {
-      ex.error.errors.forEach((element: { message: string | undefined; }) => {
-        this._snackBar.open( element.message ||"" , 'OK',{duration: 3000});
-        console.log(element.message)
-      });
+    }, ex =>{
+      if(ex.error.errors) {
+        ex.error.errors.forEach((element: { message: string | undefined; }) => {
+          this._snackBar.open( element.message ||"Resposta com campos invalidos" , 'OK',{duration: 3000});
+        });
 
-    } else {
-      if(Number.parseInt(ex.error.status) == 403){
-        this._snackBar.open("Acesso a essa operação negado, sem permissão.", 'OK',{duration: 3000})
+      } else {
+        if(Number.parseInt(ex.error.status) == 403){
+          this._snackBar.open("Acesso a essa operação negado, sem permissão.", 'OK',{duration: 3000});
 
-      }else{
-        this._snackBar.open(ex.error.message, 'OK',{duration: 3000});
 
-      console.log(ex.error.message)
+        }else{
+        this._snackBar.open(ex.error.developerMessage ||"Resposta com campos invalidos", 'OK',{duration: 6000});
 
+        }
       }
-    }
-  })
+
+    })
 
  }
   /**
@@ -116,14 +115,15 @@ export class EditUsuarioComponent implements OnInit, CanDeactivate {
   preencherCampos(matricula:string){
     this.usuarioService.buscarPorMatricula(this.usuario.matricula).subscribe((buscado)=>{
       this.usuario = buscado
+      this.usuario.senha = ""
     })
   }
 
-  /** 
+  /**
    * Função para validar os campos do formulário
    * @return Retorna um boolean que vai permitir que o botão fique funcional
    * caso todos os campos estejam válidos
-   */ 
+   */
   validarCampos(): boolean {
     return this.formulario.valid
   }
