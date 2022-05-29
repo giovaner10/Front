@@ -37,13 +37,15 @@ p{
   text-align: center;
 }
 
-@media (max-width: 600px)
+@media (max-width: 800px)
 {
   .flex-container, mat-card,.flex-card
    {
 
-    width: 90%;
+    width: 100%;
     font-size: small;
+    justify-content: center;
+    align-items: center;
    }
 
    .header .navbar-logo img {
@@ -57,15 +59,11 @@ p{
   }
 
   .flex-card{
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 30px;
-    margin: auto;
-    margin-right: -20px;
-    margin-bottom: 25px;
-    margin-left: 50px;
 
   }
 
