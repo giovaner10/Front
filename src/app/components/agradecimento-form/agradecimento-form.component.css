@@ -33,14 +33,16 @@
   align-items: center;
   border-radius: 40px;
 }
+p{
+  text-align: center;
+}
 
-
-@media (max-width: 400px)
+@media (max-width: 600px)
 {
   .flex-container, mat-card,.flex-card
    {
 
-    width: 80%;
+    width: 90%;
     font-size: small;
    }
 
@@ -64,14 +66,17 @@
     margin-right: -20px;
     margin-bottom: 25px;
     margin-left: 50px;
-    
+
   }
 
   .flex-card:hover{
     margin-bottom: 20px;
     transition: all 0.5s ease-in-out;
-    -webkit-box-shadow: 7px 12px 12px 4px rgba(81,81,81,0.42); 
+    -webkit-box-shadow: 7px 12px 12px 4px rgba(81,81,81,0.42);
     box-shadow: 7px 12px 12px 4px rgba(81,81,81,0.42);
     cursor: pointer;
+  }
+  p{
+    text-align: center;
   }
 }
