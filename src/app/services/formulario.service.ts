@@ -8,7 +8,7 @@ import { Formularios } from '../models/formularios';
 })
 export class FormularioService {
 
-  private readonly baseUrl = 'http://localhost:8080/formularios'
+  private readonly baseUrl = 'https://soulcodesucess.herokuapp.com/formularios'
 
   constructor(private http: HttpClient) { }
 

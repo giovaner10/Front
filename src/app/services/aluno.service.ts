@@ -8,7 +8,7 @@ import { Aluno } from '../models/aluno';
 })
 export class AlunoService {
 
-  private readonly baseUrl = 'http://localhost:8080/alunos'
+  private readonly baseUrl = 'https://soulcodesucess.herokuapp.com/alunos'
 
   constructor(private http: HttpClient) { }
 

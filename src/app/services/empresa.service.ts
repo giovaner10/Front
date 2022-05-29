@@ -7,7 +7,7 @@ import { Empresas } from '../models/empresa';
   providedIn: 'root'
 })
 export class EmpresaService {
-  private readonly baseUrl = 'http://localhost:8080/parceiros'
+  private readonly baseUrl = 'https://soulcodesucess.herokuapp.com/parceiros'
 
   constructor(private http: HttpClient) { }
 

@@ -10,7 +10,7 @@ import { Usuarios } from '../models/usuario';
 })
 export class UsuarioService {
 
-  private readonly baseUrl = 'http://localhost:8080/usuarios'
+  private readonly baseUrl = 'https://soulcodesucess.herokuapp.com/usuarios'
 
   constructor(private http: HttpClient) { }
 

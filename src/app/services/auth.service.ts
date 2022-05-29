@@ -9,7 +9,7 @@ import { Credenciais } from '../models/credenciais';
 export class AuthService {
 
   jwtService: JwtHelperService = new JwtHelperService();
-  private readonly baseUrl = 'http://localhost:8080/login'
+  private readonly baseUrl = 'https://soulcodesucess.herokuapp.com/login'
 
 
   constructor(private http: HttpClient) { }

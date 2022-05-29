@@ -8,7 +8,7 @@ import { Questoes } from '../models/questoes';
 })
 export class QuestoesService {
 
-  private readonly baseUrl = 'http://localhost:8080/questoes'
+  private readonly baseUrl = 'https://soulcodesucess.herokuapp.com/questoes'
 
   constructor(private http: HttpClient) { }
 
